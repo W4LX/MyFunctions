@@ -1,13 +1,11 @@
 module.exports = function (str) {
-  if (!str) return false;
-
-  if (typeof str !== "string") false;
+  if (!str || typeof str !== "string") return false;
 
   const windowsPathPattern = /^[a-zA-Z]:\\/;
 
   if (windowsPathPattern.test(str)) return false;
 
-  const urlPattern = /^[a-zA-Z][a-zA-Z\d+\-.]*?:/;
+  const urlPattern = /^(?:https?|http):\/\/[^\s/$.?#].[^\s]*$/;
 
   return urlPattern.test(str);
 };

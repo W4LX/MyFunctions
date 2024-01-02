@@ -11,7 +11,7 @@ declare module "my-functions" {
    */
   export function isImageURL(url: string): Promise<boolean>;
 
-  type CrowAPIType = "video" | "wiki" | "lyrics";
+  type CrowAPIType = "video" | "wiki" | "lyrics" | "weather";
 
   /**
    * Makes a request to a specific API based on the provided type and query.

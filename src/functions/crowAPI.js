@@ -1,7 +1,7 @@
 const config = require("../../config.json");
 
 module.exports = async function (type, query) {
-  if (!type || typeof query !== "string") {
+  if (!type || typeof type !== "string") {
     throw new Error("The type must be a string.");
   }
 
